@@ -1,0 +1,22 @@
+---
+version: 1.0.0
+description: default
+dependencies:
+  esp-idf-lib/sgm58031:
+    version: "*"
+    override_path: "../../../"
+  esp-idf-lib/i2cdev:
+    version: "*"
+  esp-idf-lib/esp_idf_lib_helpers:
+    version: "*"
+---
+version: 1.0.0
+description: single-shot
+dependencies:
+  esp-idf-lib/sgm58031:
+    version: "*"
+    override_path: "../../../"
+  esp-idf-lib/i2cdev:
+    version: "*"
+  esp-idf-lib/esp_idf_lib_helpers:
+    version: "*"
