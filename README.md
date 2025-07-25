@@ -11,7 +11,7 @@ Driver for SGM58031 16-bit I2C ADC.
 ## Installation
 
 ```sh
-idf.py add-dependency "esp-idf-lib/sgm58031^1.0.0
+idf.py add-dependency esp-idf-lib/sgm58031^1.0.0
 ```
 
 ## Support
