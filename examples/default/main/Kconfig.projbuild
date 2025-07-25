@@ -5,5 +5,5 @@ menu "Example configuration"
         help
             Number of SGM58031 devices on the bus.
 
-    rsource "../../../../devtools/Kconfig.i2c"
+    rsource "../../../Kconfig.i2c"
 endmenu
