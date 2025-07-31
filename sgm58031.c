@@ -93,13 +93,14 @@
 static const char *TAG = "sgm58031";
 
 const float sgm58031_gain_values[] = { [SGM58031_GAIN_6V144] = 6.144,
-    [SGM58031_GAIN_4V096] = 4.096,
-    [SGM58031_GAIN_2V048] = 2.048,
-    [SGM58031_GAIN_1V024] = 1.024,
-    [SGM58031_GAIN_0V512] = 0.512,
-    [SGM58031_GAIN_0V256] = 0.256,
-    [SGM58031_GAIN_0V256_2] = 0.256,
-    [SGM58031_GAIN_0V256_3] = 0.256 };
+                                       [SGM58031_GAIN_4V096] = 4.096,
+                                       [SGM58031_GAIN_2V048] = 2.048,
+                                       [SGM58031_GAIN_1V024] = 1.024,
+                                       [SGM58031_GAIN_0V512] = 0.512,
+                                       [SGM58031_GAIN_0V256] = 0.256,
+                                       [SGM58031_GAIN_0V256_2] = 0.256,
+                                       [SGM58031_GAIN_0V256_3] = 0.256
+                                     };
 
 static esp_err_t read_reg(i2c_dev_t *dev, uint8_t reg, uint16_t *val)
 {
@@ -180,7 +181,7 @@ esp_err_t sgm58031_init_desc(i2c_dev_t *dev, uint8_t addr, i2c_port_t port, gpio
     CHECK_ARG(dev);
 
     if (addr != SGM58031_ADDR_GND && addr != SGM58031_ADDR_VCC && addr != SGM58031_ADDR_SDA
-        && addr != SGM58031_ADDR_SCL)
+            && addr != SGM58031_ADDR_SCL)
     {
         ESP_LOGE(TAG, "Invalid I2C address");
         return ESP_ERR_INVALID_ARG;

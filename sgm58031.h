@@ -44,7 +44,8 @@ extern "C" {
 /**
  * Gain amplifier
  */
-typedef enum {
+typedef enum
+{
     SGM58031_GAIN_6V144 = 0, //!< +-6.144V
     SGM58031_GAIN_4V096,     //!< +-4.096V
     SGM58031_GAIN_2V048,     //!< +-2.048V (default)
@@ -63,7 +64,8 @@ extern const float sgm58031_gain_values[];
 /**
  * Input multiplexer configuration
  */
-typedef enum {
+typedef enum
+{
     SGM58031_MUX_AIN0_AIN1 = 0, //!< positive = AIN0, negative = AIN1 (default)
     SGM58031_MUX_AIN0_AIN3,     //!< positive = AIN0, negative = AIN3
     SGM58031_MUX_AIN1_AIN3,     //!< positive = AIN1, negative = AIN3
@@ -77,7 +79,8 @@ typedef enum {
 /**
  * Data rate
  */
-typedef enum {
+typedef enum
+{
     SGM58031_DATA_RATE_6_25 = 0x00, //!< 6.25 samples per second (DR_SEL = 0)
     SGM58031_DATA_RATE_12_5,        //!< 12.5 samples per second (DR_SEL = 0)
     SGM58031_DATA_RATE_25,          //!< 25 samples per second (DR_SEL = 0)
@@ -99,7 +102,8 @@ typedef enum {
 /**
  * Device operating mode
  */
-typedef enum {
+typedef enum
+{
     SGM58031_CONV_MODE_CONTINUOUS = 0, //!< Continuous conversion mode
     SGM58031_CONV_MODE_SINGLE_SHOT     //!< Power-down single-shot mode (default)
 } sgm58031_conv_mode_t;
@@ -107,7 +111,8 @@ typedef enum {
 /**
  * Comparator mode
  */
-typedef enum {
+typedef enum
+{
     SGM58031_COMP_MODE_NORMAL = 0, //!< Traditional comparator with hysteresis (default)
     SGM58031_COMP_MODE_WINDOW      //!< Window comparator
 } sgm58031_comp_mode_t;
@@ -115,7 +120,8 @@ typedef enum {
 /**
  * Comparator polarity
  */
-typedef enum {
+typedef enum
+{
     SGM58031_COMP_POLARITY_LOW = 0, //!< Active low (default)
     SGM58031_COMP_POLARITY_HIGH     //!< Active high
 } sgm58031_comp_polarity_t;
@@ -123,7 +129,8 @@ typedef enum {
 /**
  * Comparator latch
  */
-typedef enum {
+typedef enum
+{
     SGM58031_COMP_LATCH_DISABLED = 0, //!< Non-latching comparator (default)
     SGM58031_COMP_LATCH_ENABLED       //!< Latching comparator
 } sgm58031_comp_latch_t;
@@ -131,7 +138,8 @@ typedef enum {
 /**
  * Comparator queue
  */
-typedef enum {
+typedef enum
+{
     SGM58031_COMP_QUEUE_1 = 0,   //!< Assert ALERT/RDY pin after one conversion
     SGM58031_COMP_QUEUE_2,       //!< Assert ALERT/RDY pin after two conversions
     SGM58031_COMP_QUEUE_4,       //!< Assert ALERT/RDY pin after four conversions
